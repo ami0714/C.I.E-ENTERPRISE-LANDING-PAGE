@@ -213,8 +213,9 @@ function App() {
             <ul>
               <li><a onClick={()=> slideTo(0)} >HOME</a></li>
               <li><a onClick={()=> slideTo(1)} >SERVICES</a></li>
-              <li><a onClick={()=> slideTo(2)} >SPECIFIC EXPERTISE</a></li>
-              <li><a onClick={()=> slideTo(3)} >WHY CHOOSE US</a></li>
+              <li><a onClick={()=> slideTo(2)} >WHY CHOOSE US</a></li>
+              <li><a onClick={()=> slideTo(3)} >SPECIFIC EXPERTISE</a></li>
+              
             </ul>
           </div>
           <div className="footer-col">
