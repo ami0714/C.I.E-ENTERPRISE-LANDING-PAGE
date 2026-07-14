@@ -10,11 +10,15 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+main {
+  overflow-x: hidden;
+  width: 100%;      /* Guna 100% juga di sini */
+}
+
 body {
   background-color: #0e2165;
   color: #1a1a1a;
-    overflow-x: hidden; 
-  position: relative;
+   
   
 }
 
