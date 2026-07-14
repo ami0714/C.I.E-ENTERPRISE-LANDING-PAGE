@@ -5,14 +5,14 @@
   box-sizing: border-box;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   
-  /* Tambah 2 baris ini untuk kecantikan teks di Safari/Mac */
+  /* 2 baris ini untuk  teks di Safari/Mac */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 main {
   overflow-x: hidden;
-  width: 100%;      /* Guna 100% juga di sini */
+  width: 100%;   
 }
 
 body {
