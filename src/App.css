@@ -27,9 +27,12 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #32A041; 
+  background-color: rgba(50, 160, 65, 0.80); /* 75% opacity*/
   padding: 16px 40px;
   color: #fff;
+
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
 
   position: fixed;
   top: 0;              
@@ -74,14 +77,14 @@ body {
   letter-spacing: 0.5px;
 }
 .nav-right a:hover {
-  text-decoration: underline;
+ color: #FFD100;
 }
 .nav-right a:active{
   color: black;
 }
 
 .nav-wa-icon {
-  background: #fff;
+  background: #ffffff;
   width: 32px;
   height: 32px;
   border-radius: 50%;
