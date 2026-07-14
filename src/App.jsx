@@ -70,20 +70,22 @@ function App() {
           >
             WELCOME TO <i style={{color :'#FFD100'}}>{name}</i> 
           </motion.h1>
-          <motion.h2
+          <motion.p
+          className='p2'
             initial={{ opacity: 0, y: -35 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.9 }}
           >
             Your Pest Control Specialist Throughout Terengganu 
-          </motion.h2>
-           <motion.h3
+          </motion.p>
+           <motion.p
+           className='p3'
             initial={{ opacity: 0, y: -30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.9 }}
           >
             A fast and professional solution to eliminate rodent, cockroach, and insect pests directly from the source for the safety of your family.
-          </motion.h3>
+          </motion.p>
           <motion.div
             className="hero-buttons"
             initial={{ opacity: 0 }}
