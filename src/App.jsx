@@ -220,7 +220,7 @@ function App() {
           <div className="footer-col">
             <h4>FOLLOW US</h4>
             <ul>
-              <li><a href="#">TIKTOK</a></li>
+              <li><a href="https://www.tiktok.com/@cei_pest.control?is_from_webapp=1&sender_device=pc">TIKTOK</a></li>
             </ul>
           </div>
         </div>
