@@ -1,0 +1,428 @@
+/* GLOBAL RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  
+  /* Tambah 2 baris ini untuk kecantikan teks di Safari/Mac */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  background-color: #0e2165;
+  color: #1a1a1a;
+  
+}
+
+/* ---------- NAVIGATION ---------- */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #32A041; 
+  padding: 16px 40px;
+  color: #fff;
+
+  position: fixed;
+  top: 0;              
+  left: 0;                 
+  width: 100%;
+  z-index: 1000;
+
+  /* KHAS UNTUK SAFARI: Mengelakkan navbar bergegar semasa skrol */
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+}
+
+.nav-logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.nav-logo img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #fff;
+  padding: 4px;
+  overflow: hidden;
+}
+.nav-logo span {
+  font-weight: 700;
+  font-size: 1.2rem;
+}
+
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+.nav-right a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+.nav-right a:hover {
+  text-decoration: underline;
+}
+.nav-right a:active{
+  color: black;
+}
+
+.nav-wa-icon {
+  background: #fff;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #2e8b57;
+  font-size: 1.2rem;
+}
+
+/* ---------- HERO SECTION ---------- */
+.hero {
+  position: relative;
+  height: 85vh;       /* Fallback untuk pelayar web lama */
+  height: 85dvh;      /* KHAS UNTUK SAFARI: Mengikut saiz skrin sebenar secara dinamik */
+  background-image: url('./assets/hero.jpg');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #fff;
+  border-radius: 0 0 30px 30px;
+  padding-top:80px ;
+}
+button, .hero-btn, .back-top-btn, .btn {
+  /* KHAS UNTUK SAFARI: Membuang gaya butang bawaan Apple */
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.3);
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.hero h1 {
+  font-size: 48px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+.hero h2 {
+  font-size: 36px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+.hero h3 {
+  font-size: 30px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 20px;
+}
+
+.hero-btn {
+  background: #FFD100;
+  color: #000;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 50px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.hero-btn:hover {
+  background: #f0f0f0;
+}
+
+.hero-btn svg {
+  width: 20px;
+  height: 20px;
+}
+
+/* ---------- SERVICES SECTION ---------- */
+.services-section {
+  background-color: #0c1e5d; /* Biru gelap */
+  padding: 60px 40px;
+  text-align: center;
+}
+
+.services-section h2 {
+  color: #fff;
+  font-size: 2rem;
+  text-transform: uppercase;
+  margin-bottom: 40px;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.service-card {
+  background-color: #fdd835; /* Kuning */
+  padding: 30px 20px;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 200px;
+  text-align: center;
+  transition: transform 0.2s;
+}
+.service-card h3 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-bottom: 12px;
+  text-transform: uppercase;
+}
+.service-card svg {
+  width: 60px;
+  height: 60px;
+}
+
+/* ---------- WHY CHOOSE US ---------- */
+.choose-section {
+  padding: 60px 40px;
+  background: #fff;
+  text-align: center;
+}
+.choose-section h2 {
+  font-size: 2rem;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+.choose-section p {
+  font-size: 1rem;
+  margin-bottom: 40px;
+  color: #333;
+}
+
+.choose-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.choose-card {
+  border: 2px solid #000;
+  border-radius: 12px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  background: #fff;
+}
+.choose-card h4 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+.choose-card svg {
+  width: 40px;
+  height: 40px;
+}
+
+/* ---------- EXPERTISE SECTIONS ---------- */
+.expertise-section {
+  background-color: #0c1e5d;
+  padding: 20px 0;
+  text-align: center;
+}
+.expertise-section h2 {
+  color: #fff;
+  font-size: 2rem;
+  text-transform: uppercase;
+  margin-bottom: 40px;
+}
+
+.expertise-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  background: #fff;
+  margin: 0 40px 30px 40px;
+  border-radius: 12px;
+  padding: 20px;
+}
+.expertise-row.reverse {
+  flex-direction: row-reverse;
+}
+
+.expertise-img {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+.expertise-img svg {
+  width: 100px;
+  height: 100px;
+}
+
+.expertise-content {
+  flex: 1;
+  text-align: left;
+}
+.expertise-content h3 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+.expertise-content ul {
+  list-style: none;
+  padding: 0;
+}
+.expertise-content ul li {
+  margin-bottom: 8px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.expertise-content ul li::before {
+  content: "●";
+  font-size: 1.2rem;
+  color: #000;
+}
+
+/* ---------- CTA SECTION ---------- */
+.cta-section {
+  display: flex;
+  flex-direction: column;
+  background-color: #fdd835;
+  padding: 40px 40px;
+  text-align: center;
+  align-items: center;
+}
+.cta-section h2 {
+  font-size: 2.2rem;
+  font-weight: 800;
+  margin-bottom: 24px;
+}
+.btn{
+  display: flex;
+  padding: 15px;
+  justify-content: center;
+  align-items: center;
+
+}
+
+/* ---------- FOOTER ---------- */
+.footer {
+  background-color: #1a1a1a;
+  color: #ddd;
+  padding: 40px 40px 20px;
+}
+
+.footer-top {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 40px;
+  margin-bottom: 30px;
+}
+.footer-col {
+  flex: 1;
+  min-width: 200px;
+}
+.footer-col img {
+ width: 50px;
+ height: 50px;
+}
+.footer-col h4 {
+  color: #fff;
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+}
+.footer-col ul {
+  list-style: none;
+}
+.footer-col ul li {
+  margin-bottom: 8px;
+}
+.footer-col ul li a {
+  color: #ddd;
+  text-decoration: none;
+}
+.footer-col ul li a:hover {
+  color: #fff;
+}
+
+.footer-bottom {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+.back-top-btn {
+  background: transparent;
+  border: 1px solid #555;
+  color: #fff;
+  padding: 8px 24px;
+  border-radius: 30px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* ---------- MEDIA QUERIES (RESPONSIVE) ---------- */
+@media (max-width: 900px) {
+  
+  .services-grid { grid-template-columns: 1fr 1fr; }
+  .expertise-row { flex-direction: column; margin: 0 20px 20px; }
+  .expertise-row.reverse { flex-direction: column; }
+  .footer-top { flex-direction: column; }
+}
+
+@media (max-width: 600px) {
+  .navbar { padding: 12px 12px; flex-wrap: wrap;  }
+  .nav-right {padding: 12px;}
+  .nav-right { gap: 12px; }
+  
+  .hero h1 { font-size: 2rem; }
+  .hero h2 { font-size: 1.2rem; }
+  .hero h3{ font-size: 1em;}
+  .services-grid { grid-template-columns: 1fr; }
+  .choose-grid { grid-template-columns: 1fr; }
+  .cta-section h2 { font-size: 1.6rem; }
+  .expertise-content h3 { font-size: 1.4rem; }
+  .footer-top { gap: 20px; }
+}
