@@ -94,7 +94,7 @@ function App() {
             
               VIEW SERVICES
             </button>
-            <button onClick={()=> slideTo(2)}  className="hero-btn">
+            <button onClick={()=> slideTo(3)}  className="hero-btn">
               
               Expertise
             </button>
